@@ -1,6 +1,6 @@
 <?php
 include __DIR__ . '/start.php';
-$users = \App\User::find(1);
+$users = \App\Models\User::find(1);
 echo $users['name'];die;
 //创建websocket服务器对象，监听0.0.0.0:9502端口
 $ws = new swoole_websocket_server("0.0.0.0", 9502);
