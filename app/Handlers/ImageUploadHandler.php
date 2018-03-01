@@ -32,11 +32,11 @@ class ImageUploadHandler
         if ($max_width && $extension != 'gif') {
 
             // 此类中封装的函数，用于裁剪图片
-            $this->reduceSize($upload_path . '/' . $filename, $max_width);
+            $this->reduceSize($upload_path . $filename, $max_width);
         }
 
         return [
-            'path' => config('app.url') . "/$folder_name/$filename"
+            'path' => config('app.url') . "/$folder_name$filename"
         ];
     }
 
